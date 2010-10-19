@@ -1,0 +1,4 @@
+libxpudp - X-Plane UDP Library
+
+libxpudp is not really a library but a set of stuff to help reading and
+sending data From and To X-Plane using his UDP interface.
