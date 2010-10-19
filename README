@@ -1,4 +1,6 @@
 libxpudp - X-Plane UDP Library
 
-libxpudp is not really a library but a set of stuff to help reading and
-sending data From and To X-Plane using his UDP interface.
+libxpudp is not really a library but will be a set of stuff to help reading
+and sending data From and To X-Plane using his UDP interface.
+
+For the moment, only the XPDefinitions for X-Plane 9.61RC2 is available.
