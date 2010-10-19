@@ -1,11 +1,15 @@
 /* XPDefinitions.h
- * Define all stuff from "Data Input & Output" in X-Plane
+ * This file is part of libxpudp
  *
+ * Define all stuff from "Data Input & Output" in X-Plane
  * X-Plane Version: 9.61RC2
  *
  */
 
-#define XP_DEFINITIONS_VERS	"9.61RC2"
+#ifndef	__9_61RC2_XP_DEFINITIONS_H
+#define	__9_61RC2_XP_DEFINITIONS_H
+
+#define XP_DEFINITIONS_VERSION	"9.61RC2"
 
 #define XP_FRAMERATE			0
 #define XP_TIMES			1
@@ -88,7 +92,7 @@
 #define XP_LANDING_GEAR_VERT_FORCE	66
 #define XP_LANDING_GEAR_DEPLOYMENT	67
 
-#define XP_AERO_FORCES			68
+#define XP_LIFT_OVER_DRAG_COEFFS	68
 #define XP_PROP_EFFICIENCY		69
 
 #define XP_DEFS_AILERONS_1		70
@@ -163,8 +167,4 @@
 #define XP_CAMERA_LOCATION		130
 #define XP_GROUND_LOCATION		131
 
-/* ???
-#define XP_FAILURE_STATE_1_3_1		128
-#define XP_FAILURE_STATE_1_3_2		129
-#define XP_FAILURE_STATE_1_3_3		130
-*/
+#endif /* __9_61RC2_XP_DEFINITIONS_H */
