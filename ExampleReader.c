@@ -1,5 +1,8 @@
 /* ExampleReader.c
  * Example of an X-Plane Data Reader using libxpudp
+ *
+ * gcc -o xpreader ExampleReader.c xp_reader.c xp_utils.c
+ *
  */
 
 #include <stdio.h>
@@ -53,14 +56,8 @@ main(void)
 		(void)xp_log("%s:%i %s: Got packet, parsing", __FILE__, __LINE__, __func__);
 		packet = xp_reader_parse_from_raw_packet(bouffeur);
 		(void)printf("Type (%i): %s\n", packet.index, xp_type_desc[packet.index]);
-		(void)printf(" Value 1: %f\n", packet.value1);
-		(void)printf(" Value 2: %f\n", packet.value2);
-		(void)printf(" Value 3: %f\n", packet.value3);
-		(void)printf(" Value 4: %f\n", packet.value4);
-		(void)printf(" Value 5: %f\n", packet.value5);
-		(void)printf(" Value 6: %f\n", packet.value6);
-		(void)printf(" Value 7: %f\n", packet.value7);
-		(void)printf(" Value 8: %f\n", packet.value8);
+		for (z=0;z<=7;z++)
+			(void)printf(" Value %i: %f\n", z, packet.values[z]);
 	//}
 }
 

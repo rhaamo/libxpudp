@@ -12,20 +12,10 @@
 #include	"xp_utils.h"
 
 /*!
-  \fn float xp_reader_parse_from_raw_packet(char *buffer)
-  \brief Take a char[2100] as a buffer, parse it and return a float[9] with 1 index and 8 values\n
-  The returned float is like:\n
-    foo[0] = index\n
-    foo[1] = value1\n
-    foo[2] = value2\n
-    foo[3] = value3\n
-    foo[4] = value4\n
-    foo[5] = value5\n
-    foo[6] = value6\n
-    foo[7] = value7\n
-    foo[8] = value8
+  \fn \struct xp_parsed_packet xp_reader_parse_from_raw_packet(char *buffer)
+  \brief Take a char[2100] as a buffer, parse it and return a \struct xp_parsed_packet with index and values (float[8])
   \param buffer A char[2100] buffer from recv or similar
-  \return A float[9] with 1 Index and 8 Values
+  \return A \struct xp_parsed_packet with index and values (float[8])
  */
 struct xp_parsed_packet xp_reader_parse_from_raw_packet(char *buffer)
 {
@@ -73,14 +63,8 @@ struct xp_parsed_packet xp_reader_parse_from_raw_packet(char *buffer)
 	}
 	
 	packet.index = item[0];
-	packet.value1 = item[1];
-	packet.value2 = item[2];
-	packet.value3 = item[3];
-	packet.value4 = item[4];
-	packet.value5 = item[5];
-	packet.value6 = item[6];
-	packet.value7 = item[7];
-	packet.value8 = item[8];
+	for (i = 0; i <= 8; i++)
+		packet.values[i] = item[i+1];
 	
 	return packet;
 }
