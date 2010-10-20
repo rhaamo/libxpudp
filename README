@@ -7,7 +7,7 @@ Supported versions of X-Plane:
   - 9.61RC2
 
 Parsing a raw packet (directly from the buffer) is available.
-It will return a float[9] with the [0] index and 1->8 Values.
+It will return a struct with index and values[9] as a float.
 
 Contact: rhaamo -at- gruik _dot_ at
 
