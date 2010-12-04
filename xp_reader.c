@@ -53,7 +53,7 @@ struct xp_parsed_packet xp_reader_parse_from_raw_packet(char *buffer)
 				(void)xp_log("%s:%i %s: Got Integer", __FILE__, __LINE__, __func__);
 				item[v] = value.iv;
 			} else {
-				(void)xp_log("%s:%f %s: Got Float", __FILE__, __LINE__, __func__);
+				(void)xp_log("%s:%i %s: Got Float", __FILE__, __LINE__, __func__);
 				item[v] = value.fv;
 			}
 			v++;
