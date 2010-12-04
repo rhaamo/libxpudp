@@ -12,7 +12,7 @@
 
 #include "xp_shared.h" /* Needed for the xp_parsed_packet struct */
 
-char xp_sender_parse_from_struct(struct xp_parsed_packet datas_in);
+char * xp_sender_parse_from_struct(struct xp_parsed_packet datas_in);
 
 #endif /* __XP_SENDER_H */
 
