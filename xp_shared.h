@@ -15,7 +15,7 @@
 struct xp_parsed_packet
 {
   int index;	/*!< Index, same as in X-Plane "Data Input & Output" screen */
-  float values[8];	/*!< The 8 values */
+  float values[7];	/*!< The 8 values */
 };
 
 #endif /* __XP_SHARED_H */
