@@ -1,0 +1,3 @@
+* Tasks [0%] [0/0]
+** TODO Write tests for the Reader and Sender
+** TODO Add checks if incomplete struct or bad raw packet
