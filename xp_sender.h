@@ -10,11 +10,9 @@
 #ifndef	__XP_SENDER_H
 #define	__XP_SENDER_H
 
-/*! \typedef PVALUE_TYPE */
-typedef enum _PVALUE_TYPE {
-	PVALUE_FLOAT = 0,	/*!< Packet value is float */
-	PVALUE_INT = 1		/*!< Packet value is integer */
-} PVALUE_TYPE;
+#include "xp_shared.h" /* Needed for the xp_parsed_packet struct */
+
+char xp_sender_parse_from_struct(struct xp_parsed_packet datas_in);
 
 #endif /* __XP_SENDER_H */
 

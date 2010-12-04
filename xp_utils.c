@@ -21,7 +21,8 @@
 /* Consider using usefull stuff like:
    %s __FILE__ %i __LINE__ %s __func__ when calling xp_log
 */
-void xp_log(const char* fmt, ...)
+void
+xp_log(const char* fmt, ...)
 {
 #ifdef	XP_DEBUG
 	va_list args;
