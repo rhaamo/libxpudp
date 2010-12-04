@@ -7,8 +7,13 @@ Supported versions of X-Plane:
   - 9.61RC2
 
 Parsing a raw packet (directly from the buffer) is available.
-It will return a struct with index and values[9] as a float.
+It will return a struct with index and values[7] as a float.
+
+Building a raw packet (directly from a struct with index and values[7] as float) is avaiable.
+It will return a buffer to send directly.
 
 Contact: rhaamo -at- gruik _dot_ at
 
 License: New BSD License
+
+Many thanks to the developper of the Objective-C project "XP Kit" wich helped me for this project.
