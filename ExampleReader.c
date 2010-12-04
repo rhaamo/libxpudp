@@ -50,15 +50,15 @@ main(void)
 		(void)diep("bind");
 	
 	char bouffeur[2100];
-	//while(recv(s, bouffeur, sizeof(bouffeur), 0))
-	recv(s, bouffeur, sizeof(bouffeur), 0);
-	//{
+	while(recv(s, bouffeur, sizeof(bouffeur), 0))
+	//recv(s, bouffeur, sizeof(bouffeur), 0);
+	{
 		(void)xp_log("%s:%i %s: Got packet, parsing", __FILE__, __LINE__, __func__);
 		packet = xp_reader_parse_from_raw_packet(bouffeur);
 		(void)printf("Type (%i): %s\n", packet.index, xp_type_desc[packet.index]);
 		for (z=0;z<=7;z++)
 			(void)printf(" Value %i: %f\n", z, packet.values[z]);
-	//}
+	}
 }
 
 
