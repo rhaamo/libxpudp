@@ -43,7 +43,7 @@ struct xp_parsed_packet xp_reader_parse_from_raw_packet(char *buffer)
 	while (y < length)
 	{
 		x = v = 0;
-		while (x < 36) /* Why 36 ? */
+		while (x < 36) /* Total number of bytes (8 items * 4 bytes) */
 		{
 			/* Big Endian */
 			for (i = 0; i < 4; i++)
@@ -53,7 +53,7 @@ struct xp_parsed_packet xp_reader_parse_from_raw_packet(char *buffer)
 				(void)xp_log("%s:%i %s: Got Integer", __FILE__, __LINE__, __func__);
 				item[v] = value.iv;
 			} else {
-				(void)xp_log("%s:%i %s: Got Float", __FILE__, __LINE__, __func__);
+				(void)xp_log("%s:%f %s: Got Float", __FILE__, __LINE__, __func__);
 				item[v] = value.fv;
 			}
 			v++;
